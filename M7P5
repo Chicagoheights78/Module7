@@ -1,0 +1,19 @@
+# M7P5
+total_discount_sum = 0
+run_program = input("Do you want to run this program? (Yes/No): ")
+while run_program == "Yes" or run_program == "yes" or run_program == "YES":
+    quantity = float(input("Enter the quantity of the item: "))
+    price = float(input("Enter the price of the item: "))
+    extended_price = quantity * price
+    if extended_price > 10000.00:
+        discount_percent = 0.25  
+    else:
+        discount_percent = 0.10 
+    discount_amount = extended_price * discount_percent
+    total = extended_price - discount_amount
+    total_discount_sum = total_discount_sum + discount_amount
+    print(f"Extended Price:  ${extended_price:.2f}")
+    print(f"Discount Amount:  ${discount_amount:.2f}")
+    print(f"Total after discount:  ${total:.2f}")
+    run_program = input("Do you want to run this loop again? (Yes/No): ")
+print(f"Total sum of all discounts given:  ${total_discount_sum:.2f}")

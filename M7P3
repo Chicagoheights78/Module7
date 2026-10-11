@@ -1,0 +1,20 @@
+# M7P3
+start = int(input("Enter the starting number: "))
+stop = int(input("Enter the stopping number: "))
+increment = int(input("Enter the increment step value: "))
+student_count = 0
+run_program = input("Do you want to run this program? (Yes/No): ")
+while run_program == "Yes" or run_program == "yes" or run_program == "YES":
+    count = start
+    while count <= stop:
+        print(count)
+        count += increment
+    print("Student Exam Average")
+    last_name = input("Enter student's last name: ")
+    exam1 = float(input("Enter first exam score: "))
+    exam2 = float(input("Enter second exam score: "))
+    average = (exam1 + exam2) / 2
+    student_count += 1
+    print("Student", last_name, "| Average Score:", average)
+    run_program = input("Do you want to run this loop again? (Yes/No): ")
+print("Total number of students who entered data:", student_count)

@@ -1,0 +1,8 @@
+#M7P2
+start = int(input("Enter the starting number: "))
+stop = int(input("Enter the stopping number: "))
+increment = int(input("Enter the increment step value: "))
+count = start
+while count <= stop: 
+    print(count)
+    count += increment
